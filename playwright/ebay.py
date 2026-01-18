@@ -9,6 +9,6 @@ with sync_playwright() as p:
 
     search_bar = page.locator("#gh-ac")
     search_bar.fill("shirt")
-    search_bar.press("Enter")
+    search_bar.press("Enter ")
 
     page.wait_for_load_state("networkidle")
