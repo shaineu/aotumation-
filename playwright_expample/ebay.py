@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch(headless=Fal0se)
     page = browser.new_page()
 
     page.goto("https://www.ebay.com/")
@@ -9,6 +9,6 @@ with sync_playwright() as p:
 
     search_bar = page.locator("#gh-ac")
     search_bar.fill("shirt")
-    search_bar.press("Enter ")
+    search_bar.press("Enter")
 
     page.wait_for_load_state("networkidle")
